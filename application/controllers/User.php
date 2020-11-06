@@ -21,7 +21,7 @@ class User extends CI_Controller {
     }
 
     private function loadUser(){
-
+		$this->load->model('User_model', 'User');
 		$email = $this->input->post('email');
 		$password = html_escape($this->input->post('password'));
 			
