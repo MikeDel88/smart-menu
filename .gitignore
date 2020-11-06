@@ -31,4 +31,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /tests/results/
 
 smart-menu/application/config/database.php
-smart-menu/env.php
+/env.php
