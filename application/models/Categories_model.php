@@ -71,6 +71,7 @@ class Categories_model extends CI_Model {
     }
 
     public function selectCategoriesByProduct(){
+        
         $this->db->select('`categorie_id`');
         $this->db->select('COUNT(*) as nbrProduit');
         $this->db->from('categories');

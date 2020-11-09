@@ -28,4 +28,12 @@ class Etablissement_model extends CI_Model {
         return $last_id;
     }
 
+    public function selectByName($name){
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->where('address_menu', $name);
+        $query = $this->db->get();
+        return $query->custom_row_object(0, 'Etablissement');
+    }
+
 }

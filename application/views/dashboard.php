@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
         <ul class="col-12 list-group list-group-flush">
             <li class="list-group-item">Etablissement : <?= $this->etablissement->name ?></li>
-            <li class="list-group-item">Voir le menu : <a href="<?= base_url() . "menu/{$this->etablissement->address_menu}" ?>" target="_blank">lien</a></li>
+            <li class="list-group-item"><a href="<?= base_url() . "menu/{$this->etablissement->address_menu}" ?>" target="_blank" class="text-info">Voir le menu</a></li>
             <li class="list-group-item">Description : <?= $this->etablissement->description ?></li>
             <li class="list-group-item">Adresse : <?= "{$this->etablissement->address}, {$this->etablissement->code} {$this->etablissement->city} "?></li>
             <li class="list-group-item">Site web : <a href='http://<?= $this->etablissement->website?>' target='_blank' class='text-info'>  <?=     $this->etablissement->website?></a></li>

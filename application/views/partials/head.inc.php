@@ -10,6 +10,10 @@
                 'crossorigin' => 'anonymous'
             );
             echo link_tag($data);
+
+            if(isset($personnalisation)){?>
+                <link rel="icon" type="image/png" href="<?= $personnalisation->path_logo ?>" />
+            <?}
         ?>
         <title><?= $title ?></title>
     </head>
