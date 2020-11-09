@@ -25,7 +25,7 @@ class Categorie extends MY_Controller {
         $data['categories'] = $this->Categories->selectCategories($this->etablissement->id);
         $data['counts'] = $this->Categories->selectCategoriesByProduct();
 
-        $data['title'] = "Smart_menu | Catégories";
+        $data['title'] = self::$name_site . " | Catégories";
 			$this->load->view('partials/head.inc.php', $data);
 			$this->load->view('partials/header.inc.php');
 			$this->load->view('partials/nav.inc.php');
@@ -51,7 +51,7 @@ class Categorie extends MY_Controller {
 				redirect('manager/categories');
         }
 
-        $data['title'] = "Smart_menu | Ajouter une catégorie";
+        $data['title'] = self::$name_site . " | Ajouter une catégorie";
 
 			$this->load->view('partials/head.inc.php', $data);
 			$this->load->view('partials/header.inc.php');
@@ -84,7 +84,7 @@ class Categorie extends MY_Controller {
             $this->load->model('Sous_categories_model', 'Sous_Categories');
             $data['sous_categories'] = $this->Sous_Categories->selectSousCategories($data['categorie']->id);
         };
-        $data['title'] = "Smart_menu | Modifier $cat";
+        $data['title'] = self::$name_site . " | Modifier $cat";
 
 			$this->load->view('partials/head.inc.php', $data);
 			$this->load->view('partials/header.inc.php');

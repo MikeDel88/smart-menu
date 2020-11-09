@@ -15,7 +15,7 @@ class Menus extends MY_Controller {
 
         $data['menus'] = $this->Menus->selectAllMenus($this->etablissement->id);
 
-		$data['title'] = "Smart_menu | Les menus";
+		$data['title'] = self::$name_site . " | Les menus";
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');
 		$this->load->view('partials/nav.inc.php');
@@ -52,7 +52,7 @@ class Menus extends MY_Controller {
 
         $data['composition'] = $this->Menus->selectComposition($id);
 
-		$data['title'] = "Smart_menu | {$data['menu']->name}";
+		$data['title'] = self::$name_site . " | {$data['menu']->name}";
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');
 		$this->load->view('partials/nav.inc.php');

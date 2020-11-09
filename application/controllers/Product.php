@@ -22,7 +22,7 @@ class Product extends MY_Controller {
 			$data['products'][] = $this->Products->selectProducts($categorie->id);
 		}
 
-		$data['title'] = "Smart_menu | Produits";
+		$data['title'] = self::$name_site . " | Produits";
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');
 		$this->load->view('partials/nav.inc.php');
@@ -81,7 +81,7 @@ class Product extends MY_Controller {
 			$data['prix'][] = $this->Products->select_product_sous_categorie($data['product']->id, $v->id);
 		}
 		
-			$data['title'] = "Smart_menu | $prod";
+			$data['title'] = self::$name_site . " | $prod";
 			$this->load->view('partials/head.inc.php', $data);
 			$this->load->view('partials/header.inc.php');
 			$this->load->view('partials/nav.inc.php');

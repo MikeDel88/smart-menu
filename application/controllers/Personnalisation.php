@@ -17,7 +17,7 @@ class Personnalisation extends MY_Controller {
 
         $data['personnalisation'] = $this->Personnalisation->selectPersonnalisation($this->etablissement->id);
 		
-		$data['title'] = "Smart_menu | Personnalisation";
+		$data['title'] = self::$name_site . " | Personnalisation";
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');
 		$this->load->view('partials/nav.inc.php');

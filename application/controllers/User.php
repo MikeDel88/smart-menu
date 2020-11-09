@@ -11,7 +11,7 @@ class User extends CI_Controller {
             $this->loadUser();
         }
 
-        $data['title'] = "Smart_menu | Se Connecter";
+        $data['title'] = "Se Connecter";
 
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');
@@ -40,7 +40,7 @@ class User extends CI_Controller {
 
     public function sign_up(){
 
-        $data['title'] = "Smart_menu | S'inscrire";
+        $data['title'] = "S'inscrire";
 
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');

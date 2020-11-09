@@ -17,7 +17,7 @@ class Dashboard extends MY_Controller {
 		
 			$data['personnalisation'] = $this->Personnalisation->selectPersonnalisation($this->etablissement->id);
 
-			$data['title'] = "Smart_menu | Tableau de bord";
+			$data['title'] = self::$name_site . " | Tableau de bord";
 
 			$this->load->view('partials/head.inc.php', $data);
 			$this->load->view('partials/header.inc.php');
@@ -41,7 +41,7 @@ class Dashboard extends MY_Controller {
 
 		}
 
-		$data['title'] = "Smart_menu | Etablissement";
+		$data['title'] = self::$name_site . " | Etablissement";
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');
 		$this->load->view('partials/nav.inc.php');
