@@ -15,6 +15,7 @@ class Etablissement extends Utilities {
     private $code;
     private $created_at;
     private $updated_at;
+    private $address_menu;
 
     /**
      * Get the value of name
@@ -233,6 +234,26 @@ class Etablissement extends Utilities {
     public function setUser_id($user_id)
     {
         $this->user_id = $user_id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of address_menu
+     */ 
+    public function getAddress_menu()
+    {
+        return $this->address_menu;
+    }
+
+    /**
+     * Set the value of address_menu
+     *
+     * @return  self
+     */ 
+    public function setAddress_menu($address_menu)
+    {
+        $this->address_menu = $address_menu;
 
         return $this;
     }

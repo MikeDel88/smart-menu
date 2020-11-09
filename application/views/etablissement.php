@@ -23,6 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <label for="title">Nom de l'établissement :</label>
             <input type="text" class="form-control" name="name" id="title" value="<?= $this->etablissement->name ?>">
         </div>
+        <div class="form-group">
+            <div class="input-group-prepend">
+                  <div class="input-group-text bg-info text-light"><?= base_url() . "menu/"?></div>
+            </div>
+            <input type="text" class="form-control" name="address_menu" id="menu" value="<?= $this->etablissement->address_menu ?>">
+        </div>
     </div>
 
     <div class="form-group">

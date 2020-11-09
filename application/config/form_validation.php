@@ -29,6 +29,11 @@ $config = array(
                         'rules' => 'required'
                 ),
                 array(
+                        'field' => 'address_menu',
+                        'label' => 'address_menu',
+                        'rules' => 'required'
+                ),
+                array(
                         'field' => 'city',
                         'label' => 'city',
                         'rules' => 'required'

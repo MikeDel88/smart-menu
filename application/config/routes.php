@@ -81,6 +81,7 @@ $route['manager/menus/supprimer-le-menu/(:num)/(:any)'] = 'menus/delete_menu/$1/
 $route['manager/menus/supprimer-la-composition/(:num)/(:any)/(:num)'] = 'menus/delete_composition/$1/$2/$3';
 
 
+$route['menu/(:any)'] = 'front/menu';
 
 
 $route['404_override'] = '';
