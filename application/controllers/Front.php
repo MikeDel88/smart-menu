@@ -83,6 +83,15 @@ class Front extends CI_Controller {
         $this->load->view('front/menu.php', $data);
 
     }
+
+    public function accueil(){
+
+        $data['title'] = "Bienvenue sur le site";
+        $this->load->view('partials/head.inc.php', $data);
+        $this->load->view('partials/header.inc.php', $data);
+        $this->load->view('front/accueil.php', $data);
+  
+    }
     
 
 

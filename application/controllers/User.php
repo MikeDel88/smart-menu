@@ -83,7 +83,7 @@ class User extends CI_Controller {
 		$this->session->id = NULL;
 		$this->session->email = NULL;
         $this->session->sess_destroy();
-        redirect('sign-in');
+        redirect('/');
 
 	}
 

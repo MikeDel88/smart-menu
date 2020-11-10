@@ -49,7 +49,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-// $route['default_controller'] = 'back/index';
 $route['sign-up'] = 'user/sign_up';
 $route['sign-in'] = 'user/sign_in';
 $route['deconnexion'] = 'user/deconnexion';
@@ -83,6 +82,6 @@ $route['manager/menus/supprimer-la-composition/(:num)/(:any)/(:num)'] = 'menus/d
 
 $route['menu/(:any)'] = 'front/index/$1';
 
-
+$route['default_controller'] = 'front/accueil';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
