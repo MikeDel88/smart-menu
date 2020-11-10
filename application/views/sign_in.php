@@ -18,4 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<? echo form_close() ?>
 	</div>
 	<?php echo validation_errors('<div class="container alert alert-warning my-3" role="alert">', '</div>'); ?>
+	<div class="my-3">
+		<a href="<?='/sign-up'?>">Pas encore inscrit ? Inscription</a>
+	</div>
 </section>
