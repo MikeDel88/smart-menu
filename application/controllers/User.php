@@ -8,20 +8,7 @@ class User extends CI_Controller {
 
         if ($this->form_validation->run() == TRUE)
         {
-            $this->loadUser();
-        }
-
-        $data['title'] = "Se Connecter";
-
-		$this->load->view('partials/head.inc.php', $data);
-		$this->load->view('partials/header.inc.php');
-		$this->load->view('sign_in');
-        $this->load->view('partials/footer.inc.php');
-
-    }
-
-    private function loadUser(){
-		$this->load->model('User_model', 'User');
+            $this->load->model('User_model', 'User');
 		$email = $this->input->post('email');
 		$password = html_escape($this->input->post('password'));
 			
@@ -36,7 +23,17 @@ class User extends CI_Controller {
 			
 			redirect('manager/dashboard');
 		}
+        }
+
+        $data['title'] = "Se Connecter";
+
+		$this->load->view('partials/head.inc.php', $data);
+		$this->load->view('partials/header.inc.php');
+		$this->load->view('sign_in');
+        $this->load->view('partials/footer.inc.php');
+
     }
+
 
     public function sign_up(){
 
