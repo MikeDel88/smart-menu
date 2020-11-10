@@ -71,10 +71,32 @@
     <section id="menu" class="col-sm-12 col-md-6 text-center p-0">
         <h2 class="py-2" style="color : <?= $personnalisation->main_color ?>; background-color : <?= $personnalisation->text_color?>">Les menus</h2>
 
+        <!-- Je parcours chaque menu -->
         <? foreach($menus as $menu){
 
-            echo "<h5> $menu->name <span>$menu->price €</span></h5>";
+            // J'écris le nom du menu
+            echo "<h5> $menu->name - <span>$menu->price €</span></h5>";
+            echo "<ul>";
+                // Dans chaque menu je regarde la composition
+                foreach($composition_menu as $composition){
 
+                    // Si la composition possède le menu_id du menu en cours dans la boucle alors
+                    if($composition->menu_id == $menu->id){
+
+                        // Je parcours chaque produit dans la tableau des compositions
+                        foreach($products_menu as $product){
+
+                            // Si dans la composition possède le products_id du produit alors
+                            if($composition->products_id == $product->id && $composition->menu_id === $menu->id){
+
+                                //J'écris le résultat
+                                echo "<li>$composition->name | $product->name</li>";
+                            }
+                        }
+                    }
+  
+                }
+            echo "</ul>";
         }?>
 
     </section>

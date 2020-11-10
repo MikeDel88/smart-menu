@@ -15,6 +15,35 @@ class Front extends CI_Controller {
         $data['personnalisation'] = $this->Personnalisation->selectPersonnalisation($etablissement_id);
         $data['categories'] = $this->Categories->selectCategories($etablissement_id);
         $data['menus'] = $this->Menus->selectAllMenus($etablissement_id);
+        $data['products_menu'] =[];
+        
+        if(!empty($data['menus'])){
+            foreach($data['menus'] as $menus){
+                $data['compositions'][] = $this->Menus->selectComposition($menus->id);
+            }
+        }
+
+
+
+        if(!empty($data['compositions'])){
+            foreach($data['compositions'] as $compositions){
+
+                foreach($compositions as $menu){
+                    $data['composition_menu'][] = $menu;
+                }
+
+            }
+
+            foreach($data['composition_menu'] as $menu){
+
+                $produit = $this->Products->selectOneProduct($menu->products_id);
+                if(in_array($produit, $data['products_menu']) == FALSE){
+                    $data['products_menu'][] = $produit;
+                }
+            }
+        }
+        
+        
 
         if(!empty($data['categories'])){
 
@@ -46,21 +75,15 @@ class Front extends CI_Controller {
                 }
             }
 
-            // echo "<pre>";
-            // print_r($data['sous_categorie']);
-            // echo "</pre>";
-
-
         }
-        
 
         $data['title'] = "Menu | " . $data['etablissement']->name;
         
         $this->load->view('partials/head.inc.php', $data);
         $this->load->view('front/menu.php', $data);
 
-	}
-
+    }
+    
 
 
 }

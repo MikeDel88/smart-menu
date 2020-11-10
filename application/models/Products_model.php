@@ -22,6 +22,7 @@ class Products_model extends CI_Model {
         return $query->row();
     }
 
+
     public function select_product_sous_categorie($prod, $sous_cat){
 
         $this->db->select('lien_products_sous_categories.price');
