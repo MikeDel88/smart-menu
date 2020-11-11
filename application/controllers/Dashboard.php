@@ -12,8 +12,6 @@ class Dashboard extends MY_Controller {
     }
     
 	public function index(){
-
-			$this->load->model('Personnalisation_model', 'Personnalisation');
 		
 			$data['personnalisation'] = $this->Personnalisation->selectPersonnalisation($this->etablissement->id);
 
