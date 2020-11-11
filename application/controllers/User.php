@@ -8,10 +8,10 @@ class User extends CI_Controller {
         if ($this->form_validation->run() == TRUE)
         {
             $this->load->model('User_model', 'User');
-		$email = $this->input->post('email');
-		$password = html_escape($this->input->post('password'));
+			$email = $this->input->post('email');
+			$password = html_escape($this->input->post('password'));
 			
-		$data['user'] = $this->User->selectUser($email, $password);
+			$data['user'] = $this->User->selectUser($email, $password);
 		
 		if(password_verify($password, $data['user']->password)){
 			
