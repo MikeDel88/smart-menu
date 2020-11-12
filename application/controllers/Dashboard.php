@@ -8,7 +8,9 @@ class Dashboard extends MY_Controller {
 	public function __construct(){
 
 		parent::__construct();
-		
+
+		require('application/libraries/phpqrcode/qrlib.php');
+
     }
     
 	public function index(){
@@ -38,6 +40,14 @@ class Dashboard extends MY_Controller {
 			$data['info'] = "Modification enregistrée !";
 
 		}
+
+		if($this->etablissement->address_menu != ''){
+
+			$data['lien'] = base_url() . "menu/" . $this->etablissement->address_menu;
+			$data['QRcode'] = QRcode::png($data['lien'], "qrcode/{$this->etablissement->id}.png");
+
+		}
+
 
 		$data['title'] = self::$name_site . " | Etablissement";
 		$this->load->view('partials/head.inc.php', $data);

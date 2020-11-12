@@ -18,18 +18,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </section>
 <section class="container">
     <div class="row">
-    <?
-    $image_properties = array(
-        'src'   => $personnalisation->path_logo,
-        'alt'   => "Logo de l'établissement",
-        'class' => 'img-thumbnail',
-        'width' => '200',
-        'height'=> '200',
-        'title' => 'Logo',
-    );
+        <div class="col">
+        <?
+        $image_properties = array(
+            'src'   => $personnalisation->path_logo,
+            'alt'   => "Logo de l'établissement",
+            'class' => 'img-thumbnail',
+            'width' => '200',
+            'height'=> '200',
+            'title' => 'Logo',
+        );
 
-    echo img($image_properties);
-    ?>
+        echo img($image_properties);
+        ?>
+        </div>
+        <div class="col">
+            <?
+            $image_properties = array(
+                'src'   => "./qrcode/{$this->etablissement->id}.png",
+                'alt'   => "QR code de l'établissement",
+                'class' => 'img-thumbnail',
+                'width' => '200',
+                'height'=> '200',
+                'title' => 'QRcode',
+            );
+
+            echo img($image_properties);
+            ?>
+        </div>
     </div>
     <div class="row">
         <ul class="col-12 list-group list-group-flush">
