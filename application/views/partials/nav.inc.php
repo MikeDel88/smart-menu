@@ -1,8 +1,8 @@
 <style>
     .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    border-color: red;
-    background-color: red;
+    border-color: var(--danger);
+    background-color: var(--danger);
     cursor:pointer;
     }
     .custom-switch .custom-control-label::before {
@@ -35,15 +35,18 @@
         $attributes = array(
             'class' => 'form-inline my-2 my-lg-0',
         );
-
-         echo form_open('dashboard/maintenance');?>
+        ?>
+        <div class="container-fluid border-bottom pb-3">
+            <? echo form_open('dashboard/maintenance');?>
         
             <div class="custom-control custom-switch">
                 <input type="checkbox" name="maintenance" class="custom-control-input" id="customSwitch1" <?= ($this->etablissement->maintenance == 1) ? 'checked' : ''?>>
-                <label class="custom-control-label text-info" for="customSwitch1">Maintenance</label>
+                <label class="custom-control-label <?= ($this->etablissement->maintenance == 1) ? 'text-danger' : 'text-info'?> ?>" for="customSwitch1">Maintenance</label>
             </div>
 
-        <? echo form_close();?>
+            <? echo form_close();?>
+        </div>
+         
 
 
     </div>
