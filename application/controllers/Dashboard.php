@@ -39,16 +39,16 @@ class Dashboard extends MY_Controller {
 			$this->etablissement = $this->Etablissement_model->selectEtablissement($this->session->user_id);
 			$data['info'] = "Modification enregistrée !";
 
-		}
-
-		if($this->etablissement->address_menu != ''){
+			if($this->etablissement->address_menu != ''){
 
 			$data['lien'] = base_url() . "menu/" . $this->etablissement->address_menu;
 			$data['QRcode'] = QRcode::png($data['lien'], "qrcode/{$this->etablissement->id}.png");
 
+			}
+
 		}
 
-
+		
 		$data['title'] = self::$name_site . " | Etablissement";
 		$this->load->view('partials/head.inc.php', $data);
 		$this->load->view('partials/header.inc.php');
