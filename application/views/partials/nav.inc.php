@@ -25,7 +25,29 @@
             'class' => 'form-inline my-2 my-lg-0',
         );
 
-        echo form_close();
-        ?>
+         echo form_open('dashboard/maintenance');?>
+        
+            <div class="custom-control custom-switch">
+                <input type="checkbox" name="maintenance" class="custom-control-input" id="customSwitch1" <?= ($this->etablissement->maintenance == 1) ? 'checked' : ''?>>
+                <label class="custom-control-label text-info" for="customSwitch1">Maintenance</label>
+            </div>
+
+        <? echo form_close();?>
+
+
     </div>
+    
 </nav>
+
+<script type="text/javascript">
+
+        let checkBox = document.querySelector('#customSwitch1');
+
+        checkBox.addEventListener('change', function(){
+            document.querySelector('nav form').submit();
+        })
+
+</script>
+
+
+

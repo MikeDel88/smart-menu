@@ -197,6 +197,13 @@ $config = array(
                         'label' => 'products_id',
                         'rules' => 'required'
                 )
+        ),
+        'dashboard/maintenance' => array(
+                array(
+                        'field' => 'maintenance',
+                        'label' => 'maintenance'
+                )
         )
+
 
 );

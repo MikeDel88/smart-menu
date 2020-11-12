@@ -35,5 +35,12 @@ class Etablissement_model extends CI_Model {
         $query = $this->db->get();
         return $query->custom_row_object(0, 'Etablissement');
     }
+    
+    public function updateMaintenance($value){
+        $this->db->set('maintenance', $value);
+        $this->db->where('user_id', $this->session->user_id);
+        $this->db->update($this->table);
+
+    }
 
 }

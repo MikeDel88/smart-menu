@@ -59,7 +59,8 @@ class User extends CI_Controller {
 		$data = array(
         	'email' => $this->input->post('email'),
         	'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-        	'active' => '0'
+			'active' => '0',
+			'maintenance' => '1',
 		);
 		$user_id = $this->User->registerUser($data);
 		$array = array(

@@ -58,4 +58,13 @@ class Dashboard extends MY_Controller {
 		
 	}
 
+	public function maintenance(){
+
+		$value = ($this->input->post('maintenance') == on) ? 1 : 0;
+		$this->Etablissement_model->updateMaintenance($value);
+
+		redirect($_SERVER['HTTP_REFERER']);
+		
+	}
+
 }

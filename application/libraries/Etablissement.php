@@ -16,6 +16,7 @@ class Etablissement extends Utilities {
     private $created_at;
     private $updated_at;
     private $address_menu;
+    private $maintenance;
 
     /**
      * Get the value of name
@@ -254,6 +255,26 @@ class Etablissement extends Utilities {
     public function setAddress_menu($address_menu)
     {
         $this->address_menu = $address_menu;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of maintenance
+     */ 
+    public function getMaintenance()
+    {
+        return $this->maintenance;
+    }
+
+    /**
+     * Set the value of maintenance
+     *
+     * @return  self
+     */ 
+    public function setMaintenance($maintenance)
+    {
+        $this->maintenance = $maintenance;
 
         return $this;
     }
