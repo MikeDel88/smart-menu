@@ -78,10 +78,15 @@ class Front extends CI_Controller {
         }
 
         $data['title'] = "Menu | " . $data['etablissement']->name;
-        
-        $this->load->view('partials/head.inc.php', $data);
-        $this->load->view('front/menu.php', $data);
 
+        $this->load->view('partials/head.inc.php', $data);
+            
+        if($data['etablissement']->maintenance == 0){
+            $this->load->view('front/menu.php', $data);
+        }else{
+            echo "Ce menu est en cours de maintenance<br>Il revient très vite !";
+        }
+        
     }
 
     public function accueil(){
