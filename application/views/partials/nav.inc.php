@@ -1,3 +1,14 @@
+<style>
+    .custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: red;
+    background-color: red;
+    cursor:pointer;
+    }
+    .custom-switch .custom-control-label::before {
+        cursor:pointer;
+    }
+</style>
 
 <nav class="col-sm-12 col-md-2 navbar align-items-start navbar-expand-lg navbar-dark bg-dark shadow vh-100">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
