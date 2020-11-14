@@ -72,6 +72,9 @@
             <input hidden type="number" name="cat_id" class="form-control"value="<?= $categorie->id ?>">
         </div>
         <div class="form-group">
+            <input hidden type="text" name="cat_name" class="form-control"value="<?= $categorie->name ?>">
+        </div>
+        <div class="form-group">
             <label for="add">Nom de la sous-catégorie : </label>
             <input type="text" name="name" class="form-control" id="add" aria-describedby="textHelp">
         </div>
