@@ -1,3 +1,21 @@
+<style>
+    ul{
+        list-style-type: none;
+    }
+    section:hover{
+        background-color: rgba(250,250,250);
+        cursor:pointer;
+    }
+    article{
+        transform: scale(0.9);
+        background-color:white;
+        padding:20px;
+    }
+    article:hover{
+        box-shadow: 2px 2px 20px -10px black;
+    }
+</style>
+
 <header style="background-color : <?= $personnalisation->main_color ?>" class="container-fluid text-center py-2 shadow">
     <div class="row">
         <div class="col-sm-12 col-md-2">
@@ -18,14 +36,14 @@
         </div>
         <div class="col-sm-12 col-md-10 d-flex flex-column justify-content-center">
             <h1 class="py-3 border-bottom" style="color : <?= $personnalisation-> text_color ?>"><?= $etablissement->name ?></h1>
-            <p><?= $etablissement->description ?></p>
+            <p style="color : <?= $personnalisation-> text_color ?>"><?= $etablissement->description ?></p>
         </div>
     </div>
 </header>
 
 <main class="row m-0">
 
-    <section id="carte" class="col-sm-12 col-md-6 border-right p-0">
+    <section id="carte" class="card col-sm-12 col-md-6 border-right p-0">
         <h2 class="py-2 text-center" style="color : <?= $personnalisation->main_color ?>; background-color : <?= $personnalisation->text_color?>">La carte</h2>
         <? foreach($categories as $categorie){
             echo "<article class='border my-2 py-2'>";
@@ -68,7 +86,7 @@
 
     </section>
 
-    <section id="menu" class="col-sm-12 col-md-6 text-center p-0">
+    <section id="menu" class=" card col-sm-12 col-md-6 text-center p-0">
         <h2 class="py-2" style="color : <?= $personnalisation->main_color ?>; background-color : <?= $personnalisation->text_color?>">Les menus</h2>
 
         <!-- Je parcours chaque menu -->

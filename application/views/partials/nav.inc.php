@@ -9,12 +9,20 @@
         cursor:pointer;
     }
 </style>
+<div class="maintenance container-fluid border-bottom bg-dark py-3">
+    <? echo form_open('dashboard/maintenance');?>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="maintenance" class="custom-control-input maintenance" id="customSwitch1" <?= ($this->etablissement->maintenance == 1) ? 'checked' : ''?>>
+            <label class="custom-control-label <?= ($this->etablissement->maintenance == 1) ? 'text-danger' : 'text-info'?> ?>" for="customSwitch1">Maintenance</label>
+        </div>
 
-<nav class="col-sm-12 col-md-2 navbar align-items-start navbar-expand-lg navbar-dark bg-dark shadow vh-100">
+    <? echo form_close();?>
+</div>
+<nav class="col-sm-12 col-md-2 navbar align-items-start navbar-expand-lg navbar-dark bg-dark shadow">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="d-flex flex-column-reverse collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="sticky-top collapse navbar-collapse pt-3" id="navbarTogglerDemo03">
         <?
         $list = array(
             anchor('manager/dashboard', 'Tableau de bord', 'class="nav-link"'),
@@ -36,19 +44,6 @@
             'class' => 'form-inline my-2 my-lg-0',
         );
         ?>
-        <div class="container-fluid border-bottom pb-3">
-            <? echo form_open('dashboard/maintenance');?>
-        
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="maintenance" class="custom-control-input" id="customSwitch1" <?= ($this->etablissement->maintenance == 1) ? 'checked' : ''?>>
-                <label class="custom-control-label <?= ($this->etablissement->maintenance == 1) ? 'text-danger' : 'text-info'?> ?>" for="customSwitch1">Maintenance</label>
-            </div>
-
-            <? echo form_close();?>
-        </div>
-         
-
-
     </div>
     
 </nav>
@@ -58,7 +53,7 @@
         let checkBox = document.querySelector('#customSwitch1');
 
         checkBox.addEventListener('change', function(){
-            document.querySelector('nav form').submit();
+            document.querySelector('.maintenance form').submit();
         })
 
 </script>

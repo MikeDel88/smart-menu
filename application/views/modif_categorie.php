@@ -25,10 +25,10 @@
             <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"><?= $categorie->description ?></textarea>
         </div>
 
-        <div class="form-group form-check">
-            <input type="checkbox" name="sous_categorie" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Ajouter des sous-catégories</label>
-        </div>
+        <div class="custom-control custom-switch">
+                <input type="checkbox" name="sous_categorie" class="custom-control-input" id="customSwitch2" <?= ($categorie->sous_categorie == 1) ? 'checked' : ''?>>
+                <label class="custom-control-label" for="customSwitch2">Ajouter les sous-catégories</label>
+            </div>
         <div class="d-flex justify-content-between mt-3">
             <div>
                 <button type="submit" class="btn btn-dark">Modifier</button>
@@ -70,6 +70,9 @@
     <? echo form_open('categorie/add_sous_categorie'); ?>
         <div class="form-group">
             <input hidden type="number" name="cat_id" class="form-control"value="<?= $categorie->id ?>">
+        </div>
+        <div class="form-group">
+            <input hidden type="text" name="cat_name" class="form-control"value="<?= $categorie->name ?>">
         </div>
         <div class="form-group">
             <label for="add">Nom de la sous-catégorie : </label>

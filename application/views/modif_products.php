@@ -9,6 +9,12 @@
     Modifier le produit "<?= $product->name?>"
     </h2>
 </section>
+</div>
+<div class="row">
+    <div class="alert alert-success col-12" role="alert">
+        <p>Si vous ne voyez pas de prix dans la partie "Rappel des prix en cours" c'est que vous avez sélectionné d'avoir des sous-catégories, et qu'aucune sous-catégorie n'a été créee. Attention, les suppressions sont définitives !</p>
+    </div>
+</div>
 </section>
 <section class="container">
     <? echo form_open("product/modif_product"); ?>

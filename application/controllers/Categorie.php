@@ -114,12 +114,12 @@ class Categorie extends MY_Controller {
 				$this->load->model('Sous_categories_model', 'Sous_Categories');
 				$array = [];
 				foreach($this->input->post() as $post => $value){
-					if($post != 'submit'){
+					if($post != 'submit' && $post != 'cat_name'){
 						print_r($array[$post] = $value);
 					}
                 }
 				$this->Sous_Categories->insertSousCategorie($array);
-				redirect('manager/categories');
+				redirect("manager/categories/modifier-une-categorie/{$array['cat_id']}/{$this->input->post('cat_name')}");
         }else{
             redirect('manager/categories');
         }

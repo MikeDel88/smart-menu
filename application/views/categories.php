@@ -12,6 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     Catégories
     </h2>
 </section>
+</div>
+<div class="row">
+    <div class="alert alert-success col-12" role="alert">
+        <p>Dans cette rubrique, vous trouverez la liste des catégories ainsi que le nombre de produit rattaché. <span class="bg-warning text-dark">Attention ! Si vous supprimer une catégorie, tous les produits et toutes les sous catégories associées seront automatiquement effacer.</span></p>
+    </div>
+</div>
 </section>
 <section class="container">
 <ul class="list-group">
