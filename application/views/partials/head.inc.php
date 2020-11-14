@@ -18,11 +18,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title ?></title>
     </head>
-    <style>
-        body{
-            background-image: url('./assets/bg.png');
-        }
-    </style>
     <body>
         
 

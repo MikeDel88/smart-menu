@@ -14,6 +14,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="row">
     <p class="ml-2">Dernière mise à jour : <?= mdate('Le %d/%m/%Y à %H:%i', mysql_to_unix($this->etablissement->updated_at)); ?> </p>
 </div>
+<div class="row">
+    <div class="alert alert-success col-12" role="alert">
+        <p>Dans cette rubrique, vous pouvez rentrer et modifier toutes les informations sur votre établissement ainsi que le lien menant vers votre menu. Attention, toutes les rubriques doivent être renseigné pour valider les modifications !</p>
+    </div>
+</div>
 </section>
 <section class="container">
 <?php echo form_open('manager/etablissement'); ?>

@@ -11,7 +11,7 @@
 
         <div class="min-vh-50 bg-light shadow max-vw-50 p-0 m-3">
                 <p class="text-dark border-top p-2 m-0">
-                    Ce site permet d'afficher une carte de restaurant en ligne accessible via une url unique pour votre établissement.
+                    Ce site permet d'afficher une carte de restaurant en ligne accessible via une url unique pour votre établissement.<br>
                     Vous pouvez tout personnaliser à votre goût selon vos envies.
                 </p>
         </div>

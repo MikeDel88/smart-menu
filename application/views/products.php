@@ -10,6 +10,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </svg>
     Produits
     </h2>
+</div>
+<div class="row">
+    <div class="alert alert-success col-12" role="alert">
+        <p>Dans cette rubrique, vous pouvez ajouter un produit dans une catégorie et vous trouverez la liste des produits par catégorie. Cliquez sur un produit pour pouvoir le modifier et ajouter des prix.</p>
+    </div>
+</div>
 </section>
 <section class="container my-3">
   <h4>Ajouter un produit</h4>

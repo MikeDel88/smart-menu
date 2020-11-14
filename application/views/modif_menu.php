@@ -10,6 +10,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </svg>
     Modifier le menu "<?= $menu->name ?>"
     </h2>
+</div>
+<div class="row">
+    <div class="alert alert-success col-12" role="alert">
+        <p>Vous pouvez modifier le menu. Ajouter un nom de composition et d'y sélectionner les produits associés. La selection se fait de manière multiple.</p>
+    </div>
+</div>
 </section>
 <section class="container my-3">
 
@@ -77,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <ul class="list-group">
     <? foreach($composition as $produit){?>
 
-     <li class="list-group-item d-flex justify-content-between align-items-center">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
 <?  foreach($products as $k => $v){
         foreach($v as $info => $prod){
             if($produit->products_id == $prod->id){

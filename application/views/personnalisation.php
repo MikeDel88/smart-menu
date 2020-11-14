@@ -10,6 +10,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </svg>
      Personnalisation
     </h2>
+</div>
+<div class="row">
+    <div class="alert alert-success col-12" role="alert">
+        <p>Dans cette rubrique, il est possible de choisir et modifier votre logo, ainsi que les couleurs qui seront utilisées pour votre menu. <span class="text-dark bg-warning">Attention ! Si au chargement du logo celui-ci ne change pas, il vous faudra vider le cache de votre navigateur !</span></p>
+    </div>
+</div>
 </section>
 <section class="container-fluid">
 <div class="row mx-2">

@@ -10,6 +10,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </svg>
     Les menus
     </h2>
+</div>
+<div class="row">
+    <div class="alert alert-success col-12" role="alert">
+        <p>Vous avez la possibilité d'ajouter un menu avec son prix, et de voir la liste complète des menus actuels et leur prix. Cliquez sur un menu pour pouvoir le modifier et y ajouter des produits.</p>
+    </div>
+</div>
 </section>
 <section class="container my-3">
   <h4>Ajouter un menu</h4>
