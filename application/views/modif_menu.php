@@ -48,7 +48,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <? echo form_open('menus/add_composition')?>
 
      <div class="form-group">
-        <input hidden type="number" name="menu_id" class="form-control"value="<?= $menu->id ?>">
+        <input hidden type="number" name="menu_id" class="form-control" value="<?= $menu->id ?>">
+    </div>
+    <div class="form-group">
+        <input hidden type="text" name="menu_name" class="form-control" value="<?= $menu->name ?>">
     </div>
 
     <div class="row form-group d-flex justify-content-around flex-wrap">
@@ -72,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </optgroup>
             <?}?>
         </select>
-        <button type="submit" class="btn btn-dark col-md-1">Ajouter</button>
+        <button type="submit" name="submit" class="btn btn-dark col-md-1">Ajouter</button>
     </div>
 
     <? echo form_close(); ?>

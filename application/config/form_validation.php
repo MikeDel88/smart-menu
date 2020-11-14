@@ -110,7 +110,6 @@ $config = array(
                 array(
                         'field' => 'composition',
                         'label' => 'composition',
-                        'rules' => 'required',
                 ),
         ),
         'product/modif_product' => array(
@@ -122,7 +121,6 @@ $config = array(
                 array(
                         'field' => 'composition',
                         'label' => 'composition',
-                        'rules' => 'required',
                 ),
                 array(
                         'field' => 'price',

@@ -87,10 +87,9 @@ class Menus extends MY_Controller {
     public function add_composition(){
 		if($this->form_validation->run() == TRUE){
         	$array = [];
-			
 	    	foreach($this->input->post() as $post => $value){
-	    		if($post != 'submit' && $post != 'id'){
-	    			$array[$post] = $value;
+	    		if($post != 'submit' && $post != 'id' && $post != 'menu_name'){
+					$array[$post] = $value;
         	    }
         	    if($post == 'products_id'){
         	        $array[$post] = $value;
@@ -98,10 +97,13 @@ class Menus extends MY_Controller {
         	            $array[$post] = $id;
         	            $this->Menus->insertComposition($array);
         	        }
-        	    }
+				}
 			}
+			redirect("manager/menus/{$this->input->post('menu_id')}/{$this->input->post('menu_name')}");
+		}else{
+			redirect("manager/menus");
 		}
-        redirect("manager/menus");
+		
     }
 
     public function delete_composition($menu_id, $menu_name, $id){

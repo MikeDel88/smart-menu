@@ -84,7 +84,7 @@ class Front extends CI_Controller {
         if($data['etablissement']->maintenance == 0){
             $this->load->view('front/menu.php', $data);
         }else{
-            echo "Ce menu est en cours de maintenance<br>Il revient très vite !";
+            $this->load->view('front/maintenance.php', $data);
         }
         
     }
