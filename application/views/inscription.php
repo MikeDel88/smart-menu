@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<section id="container" class="container my-3 py-3 text-center border shadow ">
+<section id="container" class="container my-3 py-3 text-center bg-light border shadow ">
 	<? echo heading('Inscription', 3, 'class="py-3 bg-dark text-light"'); ?>
 	<div id="body">
 		<? echo form_open('/sign-up') ?>

@@ -40,7 +40,7 @@
             <? echo form_open('dashboard/maintenance');?>
         
             <div class="custom-control custom-switch">
-                <input type="checkbox" name="maintenance" class="custom-control-input" id="customSwitch1" <?= ($this->etablissement->maintenance == 1) ? 'checked' : ''?>>
+                <input type="checkbox" name="maintenance" class="custom-control-input maintenance" id="customSwitch1" <?= ($this->etablissement->maintenance == 1) ? 'checked' : ''?>>
                 <label class="custom-control-label <?= ($this->etablissement->maintenance == 1) ? 'text-danger' : 'text-info'?> ?>" for="customSwitch1">Maintenance</label>
             </div>
 
