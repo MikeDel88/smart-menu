@@ -20,5 +20,19 @@ class User_model extends CI_Model {
        $last_id = $this->db->insert_id();
        return $last_id;
     }
-    
+
+    public function selectUserConfirm($id)
+	{
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
+    public function activation($id){
+        $this->db->set('active', 1);
+        $this->db->where('id', $id);
+        $this->db->update($this->table);
+    }
 }

@@ -24,6 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php echo validation_errors('<div class="container alert alert-warning my-3" role="alert">', '</div>'); ?>
 	<div class="my-3">
 		<a href="<?='/sign-in'?>">Déjà inscrit ? Connexion</a>
-		<p class="text-white my-3 border p-2 bg-danger">A ce jour, votre inscription devra être validé par l'administrateur !</p>
+		<p class="text-white my-3 border p-2 bg-danger">Vous allez recevoir un lien de confirmation sur l'adresse mail que vous renseignez !</p>
 	</div>
 </section>
