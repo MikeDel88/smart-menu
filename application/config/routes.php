@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['sign-up'] = 'user/sign_up';
 $route['sign-in'] = 'user/sign_in';
 $route['deconnexion'] = 'user/deconnexion';
+$route['confirm/(:any)'] = 'user/confirm/$1';
 
 
 $route['manager/etablissement'] = 'dashboard/etablissement';
